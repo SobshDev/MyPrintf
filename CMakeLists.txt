@@ -18,4 +18,6 @@ add_executable(Printf
         "src/ methods/my_put_long_int.c"
         "include/methods/my_put_long_int.h"
         "src/ methods/my_put_unsigned_int.c"
-        "include/methods/my_put_unsigned_int.h")
+        "include/methods/my_put_unsigned_int.h"
+        "src/ methods/my_put_long_long_int.c"
+        "include/methods/my_put_long_long_int.h")

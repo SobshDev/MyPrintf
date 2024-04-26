@@ -4,6 +4,7 @@
 #include "../include/methods/my_put_int.h"
 #include "../include/methods/my_put_long_int.h"
 #include "../include/methods/my_put_unsigned_int.h"
+#include "../include/methods/my_put_long_long_int.h"
 
 int my_printf(const char *format, ...){
 
@@ -42,7 +43,7 @@ int my_printf(const char *format, ...){
             }
             case 'd' : {
                 if (longcount == 2) {
-                    ;
+                    my_put_long_long_int(va_arg(args, long long int));
                 } else if (longcount == 1) {
                     my_put_long_int(va_arg(args, long int));
                 }

@@ -9,6 +9,10 @@ void my_put_unsigned_int(unsigned int number) {
         fprintf(stderr, "Unsigned number cant be negative.");
         return;
     }
+    if (number > 4294967295) {
+        fprintf(stderr, "Unsigned number is out of range (Max : 4294967295).");
+        return;
+    }
 
     do {
         str[i++] = number % 10 + '0';
@@ -18,10 +22,6 @@ void my_put_unsigned_int(unsigned int number) {
     str[i] = '\0';
 
     for (int a = i - 1; a >= 0; a --) {
-        if (*str == '0') {
-            fprintf(stderr, "Unsigned number is out of range. (Max : 4294967295).");
-            break;
-        }
         my_put_char(str[a]);
     }
 }

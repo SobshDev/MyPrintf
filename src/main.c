@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "methods/my_printf.h"
-unsigned int a = 4294967295;
+#include <limits.h>
+long long int a = 4294967295;
 
 int main(void){
-    my_printf("%u" , a);
+    my_printf("%lld" , LLONG_MIN);
 
     return 0;
 }
