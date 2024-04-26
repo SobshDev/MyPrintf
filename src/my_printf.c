@@ -3,6 +3,7 @@
 #include "../include/methods/my_put_string.h"
 #include "../include/methods/my_put_int.h"
 #include "../include/methods/my_put_long_int.h"
+#include "../include/methods/my_put_unsigned_int.h"
 
 int my_printf(const char *format, ...){
 
@@ -40,13 +41,25 @@ int my_printf(const char *format, ...){
                 break;
             }
             case 'd' : {
-                if(longcount == 2) {
+                if (longcount == 2) {
                     ;
                 } else if (longcount == 1) {
                     my_put_long_int(va_arg(args, long int));
                 }
                 else {
                     my_put_int(va_arg(args, int));
+                }
+                break;
+            }
+            case 'u': {
+                if (longcount == 2) {
+                    ;
+                }
+                else if (longcount == 1) {
+                    ;
+                }
+                else {
+                    my_put_unsigned_int(va_arg(args, unsigned int));
                 }
                 break;
             }
